@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Promesas - JavaScript</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Taller de Promesas en JavaScript</h1>
+        <button onclick="playAudio('welcome.mp3')">Escuchar bienvenida</button>
+    </header>
+    
+    <section id="theory">
+        <h2>¿Qué son las Promesas en JavaScript?</h2>
+        <p>Las promesas son objetos que representan la terminación o el fracaso de una operación asíncrona.</p>
+    </section>
+    
+    <section id="examples">
+        <h2>Ejemplos de Promesas</h2>
+        <button onclick="examplePromiseRace()">Ejecutar Promise.race()</button>
+        <button onclick="examplePromiseAny()">Ejecutar Promise.any()</button>
+        <button onclick="examplePromiseAll()">Ejecutar Promise.all()</button>
+    </section>
+    
+    <section id="quiz">
+        <h2>Ejercicios Interactivos</h2>
+        <button onclick="loadQuiz()">Iniciar Quiz</button>
+    </section>
+    
+    <script src="js/audioPlayer.js"></script>
+    <script src="js/promiseExamples.js"></script>
+    <script src="js/interactiveQuizzes.js"></script>
+</body>
+</html>
