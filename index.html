@@ -13,8 +13,87 @@
     </header>
     
     <section id="theory">
-        <h2>¿Qué son las Promesas en JavaScript?</h2>
-        <p>Las promesas son objetos que representan la terminación o el fracaso de una operación asíncrona.</p>
+        <h1>🚀 Guía de Métodos con Promesas en JavaScript</h1>
+
+        <!-- Promise.all -->
+        <div class="method">
+            <h2>🔥 Promise.all() - "El trabajo en equipo"</h2>
+            <p><strong>¿Qué hace?</strong> Ejecuta varias promesas simultáneamente y espera que <em>todas</em> se resuelvan. Si una falla, todo el grupo falla.</p>
+            
+            <pre><code>// Ejemplo: Obtener datos de usuario y posts
+    const fetchUser = () => Promise.resolve({ nombre: "Ana" });
+    const fetchPosts = () => Promise.resolve(["post1", "post2"]);
+    
+    Promise.all([fetchUser(), fetchPosts()])
+      .then((results) => {
+        console.log("Usuario:", results[0]); // { nombre: "Ana" }
+        console.log("Posts:", results[1]);    // ["post1", "post2"]
+      })
+      .catch(() => console.error("¡Algo falló!"));
+            </code></pre>
+    
+            <p><strong>Casos de uso:</strong></p>
+            <ul>
+                <li>Cargar datos de múltiples APIs simultáneamente</li>
+                <li>Validación de formularios con campos obligatorios</li>
+            </ul>
+        </div>
+    
+        <!-- Promise.race -->
+        <div class="method">
+            <h2>🏎️ Promise.race() - "El más rápido gana"</h2>
+            <p><strong>¿Qué hace?</strong> Devuelve el resultado de la primera promesa que se resuelva (éxito o error).</p>
+    
+            <pre><code>// Ejemplo: Carrera de promesas
+    const promesaRapida = new Promise(resolve => 
+      setTimeout(() => resolve("¡Ganadora!"), 1000)
+    );
+    
+    const promesaLenta = new Promise(resolve => 
+      setTimeout(() => resolve("Perdedora"), 3000)
+    );
+    
+    Promise.race([promesaRapida, promesaLenta])
+      .then(result => console.log(result)); // ¡Ganadora! (1 segundo)
+            </code></pre>
+    
+            <p><strong>Casos de uso:</strong></p>
+            <ul>
+                <li>Implementar timeout para peticiones lentas</li>
+                <li>Elegir el servidor más rápido</li>
+            </ul>
+        </div>
+    
+        <!-- Promise.any -->
+        <div class="method">
+            <h2>🌟 Promise.any() - "El primer éxito cuenta"</h2>
+            <p><strong>¿Qué hace?</strong> Espera al primer éxito. Solo falla si <em>todas</em> las promesas son rechazadas.</p>
+    
+            <pre><code>// Ejemplo: Fuentes alternativas
+    const servidor1 = Promise.reject("Error 500");
+    const servidor2 = Promise.resolve("Datos desde CDN");
+    const servidor3 = new Promise(resolve => 
+      setTimeout(() => resolve("Respuesta lenta"), 2000)
+    );
+    
+    Promise.any([servidor1, servidor2, servidor3])
+      .then(result => console.log(result)); // "Datos desde CDN"
+            </code></pre>
+    
+            <p><strong>Casos de uso:</strong></p>
+            <ul>
+                <li>Descargas desde múltiples servidores</li>
+                <li>Sistemas de respaldo automático</li>
+            </ul>
+        </div>
+    
+        <div class="consejo">
+            <h3>💡 ¿Por qué son importantes?</h3>
+            <ul>
+                <li>Optimizan el rendimiento</li>
+                <li>Manejan operaciones complejas</li>
+                <li>Mejoran la experiencia de usuario</li>
+            </ul>
     </section>
     
     <section id="examples">
