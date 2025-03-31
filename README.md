@@ -14,8 +14,11 @@ Si deseas usar la página solo debes clonar y ejecutar el `live server` ya que s
 
 ## 🎮 ¿Cómo jugar?
 1️⃣ Reproduce los audios introductorios. 🔊
+
 2️⃣ Lee la teoría y revisa los ejemplos de código. 👀
+
 3️⃣ Interactúa con los botones para ver las Promesas en acción. 🎭
+
 4️⃣ Responde los ejercicios tipo Duolingo. 🧠💡
 
 
