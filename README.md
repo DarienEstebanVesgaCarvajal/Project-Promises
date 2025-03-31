@@ -10,7 +10,7 @@
 ✅ **Audios introductorios** para guiarte en el proceso.
 
 ## 🛠️ Uso:
-Si deseas usar la página solo debes dar click en el enlace que se encuentra en el repositorio.
+Si deseas usar la página solo debes clonar y ejecutar el `live server` ya que si lo ejecutas desde el enlace, el audio no estará disponible.
 
 ## 🎮 ¿Cómo jugar?
 1️⃣ Reproduce los audios introductorios. 🔊
